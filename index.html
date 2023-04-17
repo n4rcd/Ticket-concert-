@@ -1,16 +1,49 @@
 <html>
+
   <head>
-    <title>Design</title>
-    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://images.squarespace-cdn.com/content/v1/5bf7c69696d4550b42ef5e43/1546181230787-T4HAEJWN3UZUAHPFZ6BK/rond-png.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zbl6ols.css">
+    <title>Ticket de concert</title>
+    
   </head>
 
-  <body>
-    <div class="parent">
-      <h1 class="morice">MORICE</h1>
-      <h1 class="FEMME"></h1>
-    </div>
 
-    <script src="./js/index.js"></script>
+  <body id="container">
+      
+
+      <img id="ticket-logo" src="https://images.squarespace-cdn.com/content/v1/5bf7c69696d4550b42ef5e43/1546181230787-T4HAEJWN3UZUAHPFZ6BK/rond-png.png" alt="icon">
+
+    <div class="ticket">
+
+      <div class="ticket-header">
+          <div class="ticket-date">Date et heure de l'événement</div>
+      </div>
+      
+      <div class="ticket-title">Titre de l'événement</div>
+          <div class="ticket-info">
+          <div class="ticket-venue">Nom de la salle</div>
+          <div class="ticket-location">Ville, Pays</div>
+      </div>
+      
+      <div class="ticket-barcode">
+          <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Hello%20World" alt="QR Code">
+      </div>
+      
+      <div class="ticket-disclaimer">Ce ticket est non-remboursable et non-échangeable.</div>
+
+      <div id="gradient-circle"></div>
+
+      <div class="buttons">
+        <button id="button1" >Bouton 1</button>
+
+      </div>
+
+      
+	     <script src="./js/script.js"></script>
+      
+    </div>
   </body>
 
 </html>

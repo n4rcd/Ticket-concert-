@@ -1,17 +1,102 @@
-  html {
-    font-size: 8px;
-  }
-  .parent {
-    width: 100%;
-    height: 100%;
+
+ body {
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #E7F4FF, #A2E4FC);
+    animation: wave 5s ease-in-out infinite alternate;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    height: 100vh
+ }
 
-  .morice {
-    color: red;
-  }
-  #hamai {
-    color: blue;
-  }
+ .ticket {
+    width: 300px;
+    height: 700px;
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-color: #f7fdff;
+    border-radius: 20px;
+    position: absolute;
+    margin-right: 50%;
+    z-index: 2;
+ }
+
+ .ticket-header {
+    color: #00202e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+ }
+
+ #ticket-logo {
+    max-width: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+ }
+
+ .ticket-title {
+    font-size: 24px;
+    color:#00202e;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+
+ .ticket-info {
+    display: flex;
+    flex-wrap: wrap;
+    color:#00202e;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+ }
+
+ .ticket-info div {
+    color:#00202e;
+    flex-basis: 50%;
+    text-align: center;
+ }
+
+ .ticket-barcode {
+    color:#00202e;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+ }
+
+ .ticket-barcode img {
+    max-width: 100%;
+ }
+
+ .ticket-disclaimer {
+    font-size: 12px;
+    color:#00202e;
+    text-align: center;
+ }
+
+ .buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+button {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	background-color: #007bff;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+button:hover {
+	cursor: pointer;
+}
