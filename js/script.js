@@ -1,5 +1,5 @@
 function changeImage() {
-  document.getElementById("container").style.backgroundImage = "url(./1.jpeg)";
+  document.querySelector(".ticket").style.backgroundImage = "url(./1.jpeg)";
 }
 
 
