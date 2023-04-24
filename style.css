@@ -1,21 +1,43 @@
 
  body {
-    font-family: "poppins", sans-serif;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #E7F4FF, #A2E4FC);
-    animation: wave 5s ease-in-out infinite alternate;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh
+   font-family: "poppins", sans-serif;
+   font-weight: bold;
+   margin: 0;
+   padding: 0;
+   background: linear-gradient(to bottom right, #E7F4FF, #A2E4FC);
+   animation: wave 5s ease-in-out infinite alternate;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh
  }
 
+ button {
+	border-radius: 100%;
+	width: 30px;
+	height: 30px;
+	margin: 7px;
+	background-color: #a4c4fd;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+   border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+ /* TICKET */
  #forme {
-   width: 200px;
-   height: 200px;
+   width: 370px;
+   height: 370px;
    opacity: 0.5;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   z-index: 1;
 }
 
 .interface {
@@ -27,97 +49,102 @@
    background-color: #f7fdff;
    border-radius: 50px;
    position: relative;
-   z-index: 2;
    float: right;
    margin-left: 30%;
    margin-right: 0%;
 }
 
  .ticket {
-    width: 250px;
-    height: 600px;
-    background-size: cover;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-color: #f7fdff;
-    border-radius: 20px;
-    position: absolute;
-    margin-right: 50%;
-    z-index: 2;
+   width: 250px;
+   height: 600px;
+   background-size: cover;
+   background-position: left top;
+   background-repeat: no-repeat;
+   background-color: #f7fdff;
+   border-radius: 20px;
+   position: absolute;
+   margin-right: 50%;
+   z-index: 2;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
  }
 
  .date {
-    color: #00202e;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
- }
-
- #logo {
-    max-width: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: relative;
+   font-size: 16px;
+   color: #00202e;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+   line-height: 1.3;
+   margin-top: 20px;
+   margin-bottom: 20px;
  }
 
  .title {
-    font-size: 24px;
-    color:#00202e;
-    text-align: center;
-    margin-bottom: 20px;
+   font-size: 35px;
+   color:#00202e;
+   text-align: center;
+   position: relative;
+   z-index: 2;
+   
+ }
+
+ .concert {
+   font-size: 13px;
+   color:#00202e;
+   text-align: center;
+   position: absolute;
+   z-index: 3;
+   margin-top: 100px;
  }
 
  .info {
-    display: flex;
-    flex-wrap: wrap;
-    color:#00202e;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+   width: 180px;
+}
+
+ .ID {
+   font-size: 13px;
+   display: flex;
+   color:#00202e;
+   text-align: left;
+   margin-top: 20px;
+   margin-bottom: 20px;
  }
 
- .info div {
-    color:#00202e;
-    flex-basis: 50%;
-    text-align: center;
+ .place {
+   width: 180px;
+   font-size: 13px;
+   display: flex;
+   color:#00202e;
+   text-align: left;
  }
 
- .qrcode {
-    color:#00202e;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+ .superposition {
+   height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+ .barrecode {
+   height: 100px;
+   scale: 70%;
+   display: flex;
+   justify-content: center;
+   align-content: flex-end;
  }
 
- .qrcode img {
-    max-width: 100%;
- }
-
- .disclaimer {
-    font-size: 12px;
-    color:#00202e;
-    text-align: center;
- }
-
+ /* INTERFACE */
  .buttons {
-   justify-content: flex-end;
-   align-items: flex-end;
+   width: 100%;
+   height: 8%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    position: relative;
-}
-
-button {
-	border-radius: 50%;
-	width: 100px;
-	height: 100px;
-	margin: 10px;
-	background-color: #007bff;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-button:hover {
-	cursor: pointer;
 }
