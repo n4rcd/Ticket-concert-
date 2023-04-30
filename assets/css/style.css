@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: none;
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('/assets/images/backgrounds/background.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+}
+
+.configurator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+}
+
+.ticket {
+    width: 224px;
+    height: 576px;
+    background-image: url('/assets/images/tickets/b1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f7fdff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px; /*1 seule valeur s'applique autour de l'élément, 2 valeurs s'appliquent sur la hauteur et la largeur, 4 valeurs s'appliquent dans l'ordre des aiguilles d'une montre*/
+    color: white;
+    animation-name: gauche-droite;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes gauche-droite {
+    0% {
+      background-position: left top;
+    }
+    50% {
+      background-position: right bottom;
+    }
+    100% {
+      background-position: left top;
+    }
+  }
+
+.ticket .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ticket .header .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket .header .top img {
+    width: 84px;
+    margin-top: -8px;
+}
+
+.ticket .header .infos,
+.ticket .header .place {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.ticket .header .infos span:nth-child(2),
+.ticket .header .infos span:nth-child(3) {
+    font-weight: normal;
+}
+
+.ticket .header .place span:nth-child(3) {
+    font-weight: normal;
+}
+
+.ticket .header .bottom {
+    margin-top: 18px;
+}
+
+.ticket .main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.ticket .main .background {
+    width: 224px;
+    height: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.ticket .main #shape {
+    width: 172px;
+    opacity: 0.3;
+}
+
+.ticket .main .infos {
+    width: 224px;
+    height: 224px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; /*uppercase = majuscule*/
+}
+
+.ticket .main .infos .title {
+    font-size: 44px;
+    margin-top: 48px;
+}
+
+.ticket .main .infos .concert {
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.ticket .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ticket .footer .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    line-height: 24px;
+    font-size: 20px;
+}
+
+.ticket .footer .date span:nth-child(2) {
+    font-weight: normal;
+}
+
+.ticket .footer .barrecode img {
+    height: 72px;
+}
+
+.interface {
+    width: 576px;
+    height: 576px;
+    background: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 124px;
+    padding: 32px;
+}
+
+.interface .body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 48px 0;
+    justify-content: space-between;
+}
+
+.interface .step {
+    position: absolute;
+    margin-left: -640px;
+    top: 50%;
+    margin-top: calc(-350px / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.interface .step > span {
+    text-align: center;
+    width: 72px;
+    height: 72px;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 80px;
+    opacity: .5;
+    background-color: #A4C4FD;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+.interface .step > span.active {
+    opacity: 1;
+}
+
+.interface .header {
+    display: block;
+    padding-bottom: 60px;
+}
+
+.interface .header * {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #A4C4FD;
+    letter-spacing: 4px;
+    font-size: 20px;
+}
+
+.interface .buttons {
+    display: flex;
+    flex-direction: column;
+    color: #233E6D;
+}
+
+.interface .buttons.hidden {
+    display: none;
+}
+
+.interface .buttons .choices {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+
+.interface .buttons .choices > span {
+    font-size: 20px;
+}
+
+.interface .buttons .choices > span.solo {
+    font-size: 18px;
+}
+
+.interface .buttons .choices .categories {
+    display: flex;
+    align-items: center;
+}
+
+.interface .buttons .choices .category {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+
+.interface .buttons .choices .category > span {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.interface .buttons .choices .props {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*retour à la ligne*/
+    max-width: 240px;
+    margin-left: -8px;
+}
+
+.interface .buttons .choices .random {
+    margin-left: 24px;
+}
+
+.interface .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.choice {
+    width: 30px;
+    height: 30px;
+    border: 1px rgba(0, 0, 0, .5) solid;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.choice.black {
+    background-color: black;
+}
+
+.button {
+    width: 32px;
+    height: 32px;
+    line-height: 38px;
+    font-size: 16px;
+    color: white;
+    background-color: #A4C4FD;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    margin: 8px;
+    transition: background-color .3s;
+}
+
+.button:hover {
+    background-color: #233E6D;
+}
+
+.button.imaged {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #233E6D;
+}
+
+.button.imaged img {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.button.imaged:hover {
+    background-color: #A4C4FD;
+}
+
+.button-large {
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 32px;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content;
+    padding: 16px 20px;
+    margin: 0 8px;
+    transition: background-color .3s, width .3s;
+}
+
+.button-large.cta {
+    color: white;
+    background-color: #233E6D;
+}
+
+.button-large.cta:hover {
+    background-color: #A4C4FD;
+}

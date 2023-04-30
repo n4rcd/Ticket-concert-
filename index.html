@@ -1,64 +1,196 @@
 <html>
-
   <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="https://images.squarespace-cdn.com/content/v1/5bf7c69696d4550b42ef5e43/1546181230787-T4HAEJWN3UZUAHPFZ6BK/rond-png.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/zbl6ols.css">
     <title>Ticket de concert</title>
-    
   </head>
 
-
   <body id="container">
-   
-    <!-- TICKET -->
-    <div class="ticket">
-      <div class="info">
-          <div class="ID">ID 23871<br>DES SOURCES<br>Manon</div>
-          
+    <div class="configurator">
+      <!-- TICKET -->
+      <div class="ticket">
+        <div class="header">
+            <div class="top">
+              <div class="infos">
+                <span>ID 23871</span>
+                <span>DES SOURCES</span>
+                <span>MANON</span>
+              </div>
+              <div class="logo">
+                <img src="./assets/images/logos/defensearena.svg"/>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="place">
+                <span>67,50€</span>
+                <span>CAT 3. RANG 7. PLACE 4.</span>
+                <span>Accès violet entrée 33</span>
+              </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="background">
+              <img id="shape" src="./assets/images/shapes/1.svg" alt="Shape">
+            </div>
+            <div class="infos">
+              <div class="title">IMAGINE DRAGONS</div>
+              <div class="concert">MERCURY WORLD TOUR</div>
+            </div>
+        </div>
+        <div class="footer">
+          <div class="date">
+            <span>22/08/23</span>
+            <span>19H00</span>
+          </div>
+          <div class="barrecode">
+            <img src="./assets/images/barrecode.png" alt="barrecode">
+          </div>
+        </div>
       </div>
-      <div class="place">67,50€<br>CAT 3. RANG 7. PLACE 4.<br>Accès violet entrée 33</div>
-      <div class="superposition">
-          <img id="forme" src="./M3.svg" alt="forme">
-          <div class="title">IMAGINE<br>DRAGONS</div>
-          <div class="concert">MERCURY WORLD TOUR</div>
-      </div>
-      <div class="date">22/08/23<br>19H00</div>
-      <div class="barrecode">
-        <img id="barrecode" src="./barrecode.png" alt="barrecode">
+
+      <!-- INTERFACE -->
+      <div class="interface">
+        <div class="step">
+          <span id="step1" class="active">1</span>
+          <span id="step2">2</span>
+          <span id="step3">3</span>
+        </div>
+        <div class="body">
+          <div class="main">
+            <div class="header">
+              <span>Personnaliser son ticket</span>
+            </div>
+            <div class="buttons">
+              <h1>Fond</h1>
+              <div class="choices">
+                <span class="solo">Sélectionner un fond</span>
+                <div class="categories">
+                  <div class="category">
+                    <div id="backgroundChoices" class="props">
+                      <div class="button">1</div>
+                      <div class="button">2</div>
+                      <div class="button">3</div>
+                      <div class="button">4</div>
+                      <div class="button">5</div>
+                      <div class="button">6</div>
+                      <div class="button">7</div>
+                      <div class="button">8</div>
+                      <div class="button">9</div>
+                      <div class="button">10</div>
+                      <div class="button">11</div>
+                      <div class="button">12</div>
+                      <div class="button">13</div>
+                      <div class="button">14</div>
+                      <div class="button">15</div>
+                    </div>
+                  </div>
+                  <div class="category">
+                    <div class="button imaged">
+                      <img src="./assets/images/icons/aléatoire.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttons hidden">
+              <h1>Formes</h1>
+              <div class="choices">
+                <span class="solo">Sélectionner une forme</span>
+                <div class="categories">
+                  <div class="category">
+                    <div id="shapeChoices" class="props">
+                      <div class="button">1</div>
+                      <div class="button">2</div>
+                      <div class="button">3</div>
+                      <div class="button">4</div>
+                      <div class="button">5</div>
+                      <div class="button">6</div>
+                      <div class="button">7</div>
+                    </div>
+                  </div>
+                  <div class="category">
+                    <div class="button imaged">
+                      <img src="./assets/images/icons/aléatoire.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttons hidden">
+              <h1>Composition</h1>
+              <div class="choices">
+                <span>Titre</span>
+                <div class="categories">
+                  <div class="category">
+                    <span>Typographie</span>
+                    <div id="titleTypoChoices" class="props">
+                      <div class="button">1</div>
+                      <div class="button">2</div>
+                      <div class="button">3</div>
+                    </div>
+                  </div>
+                  <div class="category">
+                    <span>Couleur</span>
+                    <div id="titleColorChoices" class="props">
+                      <div class="choice black"></div>
+                      <div class="choice"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choices">
+                <span>Date</span>
+                <div class="categories">
+                  <div class="category">
+                    <span>Typographie</span>
+                    <div id="dateTypoChoices" class="props">
+                      <div class="button">1</div>
+                      <div class="button">2</div>
+                      <div class="button">3</div>
+                    </div>
+                  </div>
+                  <div class="category">
+                    <span>Couleur</span>
+                    <div id="dateColorChoices" class="props">
+                      <div class="choice black"></div>
+                      <div class="choice"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choices">
+                <span>Corps de texte</span>
+                <div class="categories">
+                  <div class="category">
+                    <span>Typographie</span>
+                    <div id="textTypoChoices" class="props">
+                      <div class="button">1</div>
+                      <div class="button">2</div>
+                      <div class="button">3</div>
+                    </div>
+                  </div>
+                  <div class="category">
+                    <span>Couleur</span>
+                    <div id="textColorChoices" class="props">
+                      <div class="choice black"></div>
+                      <div class="choice"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div id="previous" class="button-large">Retour</div>
+            <div id="next" class="button-large cta">Etape Suivante</div> <!--deux class différentes modifiables séparemment dans le CSS -->
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- INTERFACE -->
-    <div class="interface">
-      <div class="étape">Fond</div>
-      <div class="buttons">
-        <button id="button1">1</button>
-        <button id="button2">2</button>
-        <button id="button3">3</button>
-        <button id="button4">4</button>
-        <button id="button5">5</button>
-      </div>
-      <div class="buttons">
-        <button id="button6">6</button>
-        <button id="button7">7</button>
-        <button id="button8">8</button>
-        <button id="button9">9</button>
-        <button id="button10">10</button>
-      </div>
-      <div class="buttons">
-        <button id="button11">11</button>
-        <button id="button12">12</button>
-        <button id="button13">13</button>
-        <button id="button14">14</button>
-        <button id="button15">15</button>
-      </div>
-      <button id="aléatoire" src="./aléatoire.png" alt="aléatoire"></button>
-    </div>
-
-    <script src="./js/script.js"></script>
-
+    <script src="./assets/js/script.js"></script>
   </body>
-
 </html>
