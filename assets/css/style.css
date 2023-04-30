@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('/assets/images/backgrounds/background.jpg');
+    background: url('/assets/images/backgrounds/bg1.jpg');
     background-size: cover;
     background-position: center;
     font-family: "poppins", sans-serif;
@@ -300,8 +300,10 @@ body {
     margin: 8px;
 }
 
-.choice.black {
-    background-color: black;
+.choice.selected {
+    width: 26px;
+    height: 26px;
+    border: 4px #A4C4FD solid;
 }
 
 .button {
@@ -316,6 +318,10 @@ body {
     cursor: pointer;
     margin: 8px;
     transition: background-color .3s;
+}
+
+.button.selected {
+    background-color: #233E6D;
 }
 
 .button:hover {
@@ -350,6 +356,10 @@ body {
     padding: 16px 20px;
     margin: 0 8px;
     transition: background-color .3s, width .3s;
+}
+
+.button-large.hidden {
+    display: none;
 }
 
 .button-large.cta {

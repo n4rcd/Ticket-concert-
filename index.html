@@ -10,7 +10,7 @@
   <body id="container">
     <div class="configurator">
       <!-- TICKET -->
-      <div class="ticket">
+      <div id="ticket" class="ticket">
         <div class="header">
             <div class="top">
               <div class="infos">
@@ -52,10 +52,10 @@
 
       <!-- INTERFACE -->
       <div class="interface">
-        <div class="step">
-          <span id="step1" class="active">1</span>
-          <span id="step2">2</span>
-          <span id="step3">3</span>
+        <div id="steps" class="step">
+          <span class="active">1</span>
+          <span>2</span>
+          <span>3</span>
         </div>
         <div class="body">
           <div class="main">
@@ -69,25 +69,10 @@
                 <div class="categories">
                   <div class="category">
                     <div id="backgroundChoices" class="props">
-                      <div class="button">1</div>
-                      <div class="button">2</div>
-                      <div class="button">3</div>
-                      <div class="button">4</div>
-                      <div class="button">5</div>
-                      <div class="button">6</div>
-                      <div class="button">7</div>
-                      <div class="button">8</div>
-                      <div class="button">9</div>
-                      <div class="button">10</div>
-                      <div class="button">11</div>
-                      <div class="button">12</div>
-                      <div class="button">13</div>
-                      <div class="button">14</div>
-                      <div class="button">15</div>
                     </div>
                   </div>
                   <div class="category">
-                    <div class="button imaged">
+                    <div id="backgroundRandomChoice" class="button imaged">
                       <img src="./assets/images/icons/aléatoire.png" />
                     </div>
                   </div>
@@ -101,17 +86,10 @@
                 <div class="categories">
                   <div class="category">
                     <div id="shapeChoices" class="props">
-                      <div class="button">1</div>
-                      <div class="button">2</div>
-                      <div class="button">3</div>
-                      <div class="button">4</div>
-                      <div class="button">5</div>
-                      <div class="button">6</div>
-                      <div class="button">7</div>
                     </div>
                   </div>
                   <div class="category">
-                    <div class="button imaged">
+                    <div id="shapeRandomChoice" class="button imaged">
                       <img src="./assets/images/icons/aléatoire.png" />
                     </div>
                   </div>
@@ -126,16 +104,11 @@
                   <div class="category">
                     <span>Typographie</span>
                     <div id="titleTypoChoices" class="props">
-                      <div class="button">1</div>
-                      <div class="button">2</div>
-                      <div class="button">3</div>
                     </div>
                   </div>
                   <div class="category">
                     <span>Couleur</span>
                     <div id="titleColorChoices" class="props">
-                      <div class="choice black"></div>
-                      <div class="choice"></div>
                     </div>
                   </div>
                 </div>
@@ -145,17 +118,11 @@
                 <div class="categories">
                   <div class="category">
                     <span>Typographie</span>
-                    <div id="dateTypoChoices" class="props">
-                      <div class="button">1</div>
-                      <div class="button">2</div>
-                      <div class="button">3</div>
-                    </div>
+                    <div id="dateTypoChoices" class="props"></div>
                   </div>
                   <div class="category">
                     <span>Couleur</span>
                     <div id="dateColorChoices" class="props">
-                      <div class="choice black"></div>
-                      <div class="choice"></div>
                     </div>
                   </div>
                 </div>
@@ -166,16 +133,11 @@
                   <div class="category">
                     <span>Typographie</span>
                     <div id="textTypoChoices" class="props">
-                      <div class="button">1</div>
-                      <div class="button">2</div>
-                      <div class="button">3</div>
                     </div>
                   </div>
                   <div class="category">
                     <span>Couleur</span>
                     <div id="textColorChoices" class="props">
-                      <div class="choice black"></div>
-                      <div class="choice"></div>
                     </div>
                   </div>
                 </div>
@@ -184,7 +146,7 @@
           </div>
 
           <div class="footer">
-            <div id="previous" class="button-large">Retour</div>
+            <div id="previous" class="button-large hidden">Retour</div>
             <div id="next" class="button-large cta">Etape Suivante</div> <!--deux class différentes modifiables séparemment dans le CSS -->
           </div>
         </div>
