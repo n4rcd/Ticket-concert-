@@ -372,3 +372,11 @@ body {
 .button-large.cta:hover {
     background-color: #A4C4FD;
 }
+
+.screenshot {
+    opacity: 0.1;
+    border-radius: 20px;
+    display: absolute;
+    justify-content: flex-start;
+    padding: 7px 10px;
+}

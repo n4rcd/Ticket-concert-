@@ -41,7 +41,7 @@ nextButton.addEventListener('click', () => {
 
 // TICKET COMPOSITION
 
-const fonts = ['Poppins', 'Century', 'Transducer'];
+const fonts = ['Poppins', 'Arial', 'Belarius Serif'];
 const colors = ['#ffffff', '#000000'];
 
 const titleTypoChoices = document.getElementById('titleTypoChoices');

@@ -8,7 +8,9 @@
   </head>
 
   <body id="container">
+
     <div class="configurator">
+
       <!-- TICKET -->
       <div id="ticket" class="ticket">
         <div class="header">
@@ -154,5 +156,41 @@
     </div>
 
     <script src="./assets/js/script.js"></script>
+
+    <button class="screenshot">Screenshot</button>
+
   </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    function Capture(){
+      console.log("capturedecran");
+      var canvasPromise = html2canvas(document.body, {
+        useCORS: true 
+      })
+
+      canvasPromise.then((canvas)=> {
+        console.log(canvas);
+
+        var dataURL = canvas.toDataURL("image/jpg"); // transforme notre screen en BASE64
+        console.log(dataURL)
+
+        var img = new Image()
+        img.src = dataURL;
+        img.download = "TicketConcert";
+
+        var a = document.createElement("a");
+        a.innerHTML = "DOWNLOAD ton image";
+        a.target = "_blank"; // ouvrir dans un nouvel onglet
+        a.href = img.src;
+        a.download = img.download
+
+        a.click()
+
+      })
+    }
+    document.querySelector(".screenshot").addEventListener("click",Capture);
+  </script>
+
+
 </html>
