@@ -115,11 +115,12 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
+    z-index: 1;
 }
 
 .ticket .main #shape {
     width: 172px;
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .ticket .main .infos {
@@ -130,6 +131,7 @@ body {
     align-items: center;
     justify-content: center;
     text-transform: uppercase; /*uppercase = majuscule*/
+    z-index: 2;
 }
 
 .ticket .main .infos .title {

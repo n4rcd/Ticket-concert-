@@ -41,7 +41,7 @@ nextButton.addEventListener('click', () => {
 
 // TICKET COMPOSITION
 
-const fonts = ['Poppins', 'Elephant', 'Belarius Serif'];
+const fonts = ['Poppins', 'Century', 'Transducer'];
 const colors = ['#ffffff', '#000000'];
 
 const titleTypoChoices = document.getElementById('titleTypoChoices');
@@ -180,7 +180,7 @@ function setTextFont(fontNumber){
 
 // TICKET SHAPES
 
-const ticketShapesCount = 3; // changer le nombre selon le nombre d'élément
+const ticketShapesCount = 10; // changer le nombre selon le nombre d'élément
 
 const shapeChoices = document.getElementById('shapeChoices');
 
@@ -216,7 +216,7 @@ function setTicketShape(number){
 
 // TICKET BACKGROUNDS
 
-const ticketBackgroundsCount = 15; // changer le nombre selon le nombre d'élément
+const ticketBackgroundsCount = 25 // changer le nombre selon le nombre d'élément
 
 const backgroundChoices = document.getElementById('backgroundChoices');
 
