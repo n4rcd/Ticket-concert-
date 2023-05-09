@@ -15,8 +15,8 @@ for(let i = 0; i < steps.childElementCount; i++){
 
 function setStep(number){
   actualStep = number;
-  if(number == steps.childElementCount-1) nextButton.innerText = 'Finaliser';
-  else nextButton.innerText = 'Etape Suivante';
+  if(number == steps.childElementCount-1) {nextButton.innerText = 'Finaliser'; document.querySelector("#next").addEventListener("click",Capture); } 
+  else {nextButton.innerText = 'Etape Suivante'; document.querySelector("#next").removeEventListener("click",Capture);  };
   if(number == 0) previousButton.classList.add('hidden');
   else previousButton.classList.remove('hidden');
 
@@ -240,6 +240,14 @@ document.getElementById('backgroundRandomChoice').addEventListener('click', () =
 
 function setTicketBackground(number){
   document.getElementById('ticket').style.backgroundImage = `url('/assets/images/tickets/b`+(number+1)+`.jpg')`; // fond d'écran adapté à la forme
+
+if(number+1==2 || number+1==5 || number+1==7 || number+1==9 || number+1==10 || number+1==16 || number+1==17 || number+1==20 || number+1==22 || number+1==23 || number+1==24){
+  document.querySelector(".logoblanc").style.display="block"
+  document.querySelector(".logonoir").style.display="none"
+} else {
+  document.querySelector(".logonoir").style.display="block"
+  document.querySelector(".logoblanc").style.display="none"
+}
 
   for(let y = 0; y < ticketBackgroundsCount; y++){
     backgroundChoices.children[y].classList.remove('selected');

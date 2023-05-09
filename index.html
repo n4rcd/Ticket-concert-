@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/zbl6ols.css">
     <title>Ticket de concert</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
   </head>
 
   <body id="container">
@@ -21,7 +22,8 @@
                 <span>MANON</span>
               </div>
               <div class="logo">
-                <img src="./assets/images/logos/defensearena.svg"/>
+                <img  class="logoblanc" src="./assets/images/logos/defensearenablanc.svg"/>
+                <img class="logonoir" src="./assets/images/logos/defensearena.svg"/>
               </div>
             </div>
             <div class="bottom">
@@ -35,7 +37,7 @@
         <div class="main">
             <div class="infos">
               <div class="title">IMAGINE DRAGONS</div>
-              <div class="concert">MERCURY WORLD TOUR</div>
+              <div class="concert">MERCURY WORLD TOUR</div> 
             </div>
             <div class="background">
               <img id="shape" src="./assets/images/shapes/1.svg" alt="Shape">
@@ -157,40 +159,30 @@
 
     <script src="./assets/js/script.js"></script>
 
-    <button class="screenshot">Screenshot</button>
-
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script>
     function Capture(){
       console.log("capturedecran");
-      var canvasPromise = html2canvas(document.body, {
+      var canvasPromise = html2canvas(document.querySelector(".ticket"), {
         useCORS: true 
       })
 
       canvasPromise.then((canvas)=> {
         console.log(canvas);
 
-        var dataURL = canvas.toDataURL("image/jpg"); // transforme notre screen en BASE64
+        var dataURL = canvas.toDataURL("image/png"); // transforme notre screen en BASE64
         console.log(dataURL)
 
-        var img = new Image()
-        img.src = dataURL;
-        img.download = "TicketConcert";
-
-        var a = document.createElement("a");
-        a.innerHTML = "DOWNLOAD ton image";
-        a.target = "_blank"; // ouvrir dans un nouvel onglet
-        a.href = img.src;
-        a.download = img.download
-
-        a.click()
+        var pdf = new jsPDF();
+        pdf.addImage(dataURL, 'png', 50, 50, 95, 212); // 95x212 mm (A4) landscape orientation
+        pdf.save("TicketConcert.pdf");
 
       })
     }
-    document.querySelector(".screenshot").addEventListener("click",Capture);
-  </script>
+</script>
 
 
 </html>
