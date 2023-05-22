@@ -116,7 +116,7 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    z-index: 1;
+    z-index: 1; /* l'élément qui a le plus gros chiffre va revenir au premier plan, important lorsque l'on superpose des éléments */
 }
 
 .ticket .main #shape {
@@ -195,7 +195,7 @@ body {
     position: absolute;
     margin-left: -640px;
     top: 50%;
-    margin-top: calc(-350px / 2);
+    margin-top: calc(-350px / 2); /* applique une marge supérieure calculée de la moitié de -350px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,7 +203,7 @@ body {
     height: 350px;
 }
 
-.interface .step > span {
+.interface .step > span { /* stylise seulement les <span> dans sa class respective */
     text-align: center;
     width: 72px;
     height: 72px;
@@ -212,12 +212,12 @@ body {
     line-height: 80px;
     opacity: .5;
     background-color: #A4C4FD;
-    border-radius: 50%;
+    border-radius: 50%; /* définit le rayon de la bordure pour créer un élément circulaire */
     color: white;
-    cursor: pointer;
+    cursor: pointer; /* change le curseur de la souris en une main pointant lorsqu'on survole l'élément */
 }
 
-.interface .step > span.active {
+.interface .step > span.active { /* style supplémentaire quand la condition est remplie */
     opacity: 1;
 }
 
@@ -277,7 +277,7 @@ body {
 .interface .buttons .choices .props {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /*retour à la ligne*/
+    flex-wrap: wrap; /* retour à la ligne */
     max-width: 240px;
     margin-left: -8px;
 }
@@ -320,7 +320,7 @@ body {
     text-align: center;
     cursor: pointer;
     margin: 8px;
-    transition: background-color .3s;
+    transition: background-color .3s; /* fondu pour une animation en douceur */
 }
 
 .button.selected {
@@ -345,7 +345,7 @@ body {
     max-height: 24px;
 }
 
-.button.imaged:hover {
+.button.imaged:hover { /* s'applique en état de survol */
     background-color: #A4C4FD;
 }
 
@@ -362,7 +362,7 @@ body {
 }
 
 .button-large.hidden {
-    display: none;
+    display: none; /* masqué */
 }
 
 .button-large.cta {
@@ -370,7 +370,7 @@ body {
     background-color: #233E6D;
 }
 
-.button-large.cta:hover {
+.button-large.cta:hover { /* s'applique en état de survol */
     background-color: #A4C4FD;
 }
 
