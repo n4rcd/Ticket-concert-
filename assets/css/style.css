@@ -1,33 +1,33 @@
-* {
+* { /* sélecteur qui applique les styles à tous les élements de la page, normalise les comportements par défaut et crée une base cohérente */
     margin: 0;
     padding: 0;
-    overflow: none;
-    outline: none;
+    overflow: none; /* désactive la barre de défilement si le contenu d'un élément dépasse sa taille */
+    outline: none; /* supprime l'effet de contour lorsque qu'un élément est en surbrillance ou en focus */
 }
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: 100vw; /* taille de la fenêtre en % */
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* alignement vertical */
+    align-items: center; /* alignement horizontal */
     background: url('/assets/images/backgrounds/bg1.jpg');
-    background-size: cover;
+    background-size: cover; /* img de fond s'ajuste à la fenêtre */
     background-position: center;
     font-family: "poppins", sans-serif;
     font-weight: bold;
 }
 
-.configurator {
+.configurator { /* regroupe le ticket et l'interface */
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* éléments qui se suivent horizontalement dans l'ordre du code HTML */
     justify-content: center;
     align-items: center;
-    width: 75vw;
+    width: 75vw; /* 75% de le la surface */
 }
 
 .ticket {
@@ -43,15 +43,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 32px; /*1 seule valeur s'applique autour de l'élément, 2 valeurs s'appliquent sur la hauteur et la largeur, 4 valeurs s'appliquent dans l'ordre des aiguilles d'une montre*/
+    padding: 32px; /* 1 seule valeur s'applique autour de l'élément, 2 valeurs s'appliquent sur la hauteur et la largeur, 4 valeurs s'appliquent dans l'ordre des aiguilles d'une montre */
     color: white;
     animation-name: gauche-droite;
     animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; /* en continue */
+    animation-timing-function: ease-in-out; /* boucle démarrant à l'endroit où le visuel se termine */
 }
 
-@keyframes gauche-droite {
+@keyframes gauche-droite { /* définit les étapes clefs */
     0% {
       background-position: left top;
     }
@@ -63,7 +63,7 @@ body {
     }
   }
 
-.ticket .header {
+.ticket .header { /* hiérarchisation */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -89,7 +89,7 @@ body {
 }
 
 .ticket .header .infos span:nth-child(2),
-.ticket .header .infos span:nth-child(3) {
+.ticket .header .infos span:nth-child(3) { /* applique le style sur le 2ème et 3ème <span> dans la class infos */
     font-weight: normal;
 }
 

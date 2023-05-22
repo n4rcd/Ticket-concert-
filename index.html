@@ -1,28 +1,29 @@
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- permet d'afficher les caractères spéciaux, les symboles et les différents langages -->
+    <!-- rel="identifie un élément" type="style de fichier" sizes="taille en pixels" href="lien de l'image" -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://images.squarespace-cdn.com/content/v1/5bf7c69696d4550b42ef5e43/1546181230787-T4HAEJWN3UZUAHPFZ6BK/rond-png.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/zbl6ols.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> <!-- trouve l'emplacement du fichier css pour qu'il puisse styliser le reste du projet -->
+    <link rel="stylesheet" href="https://use.typekit.net/zbl6ols.css"> <!-- importe une feuille de style depuis une source externe pour personnaliser les typos -->
     <title>Ticket de concert</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script> <!-- lien renvoyant à un site de conversion en pdf -->
   </head>
 
-  <body id="container">
+  <body id="container"> <!-- identifie un élément spécifique -->
 
-    <div class="configurator">
+    <div class="configurator"> <!-- attribue et regroupe un ou plusieurs éléments similaires, facilite l'application de style commun -->
 
       <!-- TICKET -->
-      <div id="ticket" class="ticket">
+      <div id="ticket" class="ticket"> <!-- la div correspond à un groupe d'éléments, facilite la manipulation dans le plan de travail -->
         <div class="header">
             <div class="top">
               <div class="infos">
-                <span>ID 23871</span>
+                <span>ID 23871</span> <!-- span est plus adpaté pour des modifications de txt spécifiques et une mise en forme interne -->
                 <span>DES SOURCES</span>
                 <span>MANON</span>
               </div>
               <div class="logo">
-                <img  class="logoblanc" src="./assets/images/logos/defensearenablanc.svg"/>
+                <img class="logoblanc" src="./assets/images/logos/defensearenablanc.svg"/>
                 <img class="logonoir" src="./assets/images/logos/defensearena.svg"/>
               </div>
             </div>
@@ -33,16 +34,16 @@
                 <span>Accès violet entrée 33</span>
               </div>
             </div>
-        </div>
+        </div> <!-- fin du code du haut du ticket -->
         <div class="main">
             <div class="infos">
               <div class="title">IMAGINE DRAGONS</div>
               <div class="concert">MERCURY WORLD TOUR</div> 
             </div>
             <div class="background">
-              <img id="shape" src="./assets/images/shapes/1.svg" alt="Shape">
+              <img id="shape" src="./assets/images/shapes/1.svg" alt="Shape"> <!-- alt="" -->
             </div>
-        </div>
+        </div> <!-- fin du code du centre du ticket -->
         <div class="footer">
           <div class="date">
             <span>22/08/23</span>
@@ -51,7 +52,7 @@
           <div class="barrecode">
             <img src="./assets/images/barrecode.png" alt="barrecode">
           </div>
-        </div>
+        </div> <!-- fin du code du bas du ticket -->
       </div>
 
       <!-- INTERFACE -->
@@ -60,29 +61,31 @@
           <span class="active">1</span>
           <span>2</span>
           <span>3</span>
-        </div>
+        </div> <!-- fin du code pour définir les étapes -->
         <div class="body">
           <div class="main">
             <div class="header">
               <span>Personnaliser son ticket</span>
             </div>
+            <!-- ETAPE 1 -->
             <div class="buttons">
               <h1>Fond</h1>
               <div class="choices">
                 <span class="solo">Sélectionner un fond</span>
                 <div class="categories">
                   <div class="category">
-                    <div id="backgroundChoices" class="props">
+                    <div id="backgroundChoices" class="props"> <!-- deux class différentes modifiables séparemment dans le CSS -->
                     </div>
                   </div>
                   <div class="category">
                     <div id="backgroundRandomChoice" class="button imaged">
-                      <img src="./assets/images/icons/aléatoire.png" />
+                      <img src="./assets/images/icons/aléatoire.png" /> <!-- png du bouton aléatoire -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- ETAPE 2 -->
             <div class="buttons hidden">
               <h1>Formes</h1>
               <div class="choices">
@@ -94,90 +97,96 @@
                   </div>
                   <div class="category">
                     <div id="shapeRandomChoice" class="button imaged">
-                      <img src="./assets/images/icons/aléatoire.png" />
+                      <img src="./assets/images/icons/aléatoire.png" /> <!-- png du bouton aléatoire -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- ETAPE 3 -->
             <div class="buttons hidden">
               <h1>Composition</h1>
               <div class="choices">
+                <!-- CATEGORIE 1 -->
                 <span>Titre</span>
                 <div class="categories">
                   <div class="category">
-                    <span>Typographie</span>
+                    <span>Typographie</span> <!-- sous-titre -->
                     <div id="titleTypoChoices" class="props">
                     </div>
                   </div>
                   <div class="category">
-                    <span>Couleur</span>
+                    <span>Couleur</span> <!-- sous-titre -->
                     <div id="titleColorChoices" class="props">
                     </div>
                   </div>
                 </div>
               </div>
               <div class="choices">
+                <!-- CATEGORIE 2 -->
                 <span>Date</span>
                 <div class="categories">
                   <div class="category">
-                    <span>Typographie</span>
+                    <span>Typographie</span> <!-- sous-titre -->
                     <div id="dateTypoChoices" class="props"></div>
                   </div>
                   <div class="category">
-                    <span>Couleur</span>
+                    <span>Couleur</span> <!-- sous-titre -->
                     <div id="dateColorChoices" class="props">
                     </div>
                   </div>
                 </div>
               </div>
               <div class="choices">
+                <!-- CATEGORIE 3 -->
                 <span>Corps de texte</span>
                 <div class="categories">
                   <div class="category">
-                    <span>Typographie</span>
+                    <span>Typographie</span> <!-- sous-titre -->
                     <div id="textTypoChoices" class="props">
                     </div>
                   </div>
                   <div class="category">
-                    <span>Couleur</span>
+                    <span>Couleur</span> <!-- sous-titre -->
                     <div id="textColorChoices" class="props">
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> <!-- fin du code pour les boutons de l'étape 3 -->
           </div>
 
+          <!-- BOUTONS -->
           <div class="footer">
             <div id="previous" class="button-large hidden">Retour</div>
-            <div id="next" class="button-large cta">Etape Suivante</div> <!--deux class différentes modifiables séparemment dans le CSS -->
+            <div id="next" class="button-large cta">Etape Suivante</div>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script> <!-- trouve l'emplacement du fichier JS pour qu'il puisse agir sur le reste du projet -->
 
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- integrity et crossorigin garantissent que le fichier JS n'a pas été altéré et provient d'une source fiable -->
 
   <script>
     function Capture(){
       console.log("capturedecran");
       var canvasPromise = html2canvas(document.querySelector(".ticket"), {
-        useCORS: true 
-      })
+        useCORS: true // contourne les limitations de sécurité pour réaliser sa tâche
+      }) // capture l'écran
 
-      canvasPromise.then((canvas)=> {
+      canvasPromise.then((canvas)=> { // stocke la capture
         console.log(canvas);
 
-        var dataURL = canvas.toDataURL("image/png"); // transforme notre screen en BASE64
+        var dataURL = canvas.toDataURL("image/png"); // transforme notre screen en BASE64 au format PNG
         console.log(dataURL)
 
-        var pdf = new jsPDF();
-        pdf.addImage(dataURL, 'png', 50, 50, 95, 212); // 95x212 mm (A4) landscape orientation
+        var pdf = new jsPDF(); // transforme le PNG en PDF
+        pdf.addImage(dataURL, 'png', 58, 43, 95, 212); // 58, 43 : positionnement sur le plan de travail / 95, 212 : taille de l'image en mm
         pdf.save("TicketConcert.pdf");
 
       })

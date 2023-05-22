@@ -1,5 +1,7 @@
-[.*]
-end_of_line = lf
-insert_final_newline = true
-indent_style = tab
+[.*] # s'applique à tous les types de fichier
+end_of_line = lf # les fins de ligne doivent utiliser un caractère de saut
+insert_final_newline = true # le fichier se termine par une nouvelle ligne
+indent_style = tab # style d'indentation en utilisant des tabulations
 indent_size = 4
+
+# règles de formatage du code source
