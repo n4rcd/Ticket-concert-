@@ -70,7 +70,7 @@ for(let i = 0; i < colors.length; i++){ // boucle de répétition (d'itération)
     setTitleColor(i); // nvlle fonct°
   });
 
-  titleColorChoices.append(color); // la couleur est associé à l'élément déclaré en amont
+  titleColorChoices.append(color); // la couleur est associée à la fonction déclarée en amont
   if(i == 0) setTitleColor(i); // la fonct° est appelée pour définir la couleur du titre initial
 }
 
